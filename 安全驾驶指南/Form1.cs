@@ -19,7 +19,7 @@ namespace 安全驾驶指南
             InitializeComponent();
         }
 
-        private string[] values = { "富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法制", "爱国", "敬业", "诚信", "友善"};
+        private string[] values = { "富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善"};
 
         /// <summary>
         /// 加密按钮点击事件
@@ -28,10 +28,10 @@ namespace 安全驾驶指南
         /// <param name="e"></param>
         private void btnEnCode_Click(object sender, EventArgs e)
         {
-            string input = textBoxDe.Text;
+            string input = richTextBoxDe.Text.Trim();
             string output = valuesEncode(input);
             Clipboard.SetDataObject(output);//顺手复制到剪贴板
-            textBoxEn.Text = output;
+            richTextBoxEn.Text = output;
         }
 
         /// <summary>
@@ -41,10 +41,10 @@ namespace 安全驾驶指南
         /// <param name="e"></param>
         private void btnDeCode_Click(object sender, EventArgs e)
         {
-            string input = textBoxEn.Text;
+            string input = richTextBoxEn.Text.Trim();
             string output = valuesDecode(input);
             Clipboard.SetDataObject(output);//顺手复制到剪贴板
-            textBoxDe.Text = output;
+            richTextBoxDe.Text = output;
         }
 
         /// <summary>
@@ -227,6 +227,14 @@ namespace 安全驾驶指南
             return (new Random()).NextDouble() > 0.5 ? true : false;
         }
 
+        private void SafeDrivingGuideForm_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show("Test");
+        }
 
+        private void SafeDrivingGuideForm_DoubleClick(object sender, EventArgs e)
+        {
+            MessageBox.Show("Variazioni CopyRight\n感谢算法原作者sym233");
+        }
     }
 }

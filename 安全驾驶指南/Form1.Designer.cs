@@ -29,31 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SafeDrivingGuideForm));
-            this.textBoxDe = new System.Windows.Forms.TextBox();
-            this.textBoxEn = new System.Windows.Forms.TextBox();
             this.btnEnCode = new System.Windows.Forms.Button();
             this.btnDeCode = new System.Windows.Forms.Button();
+            this.richTextBoxEn = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxDe = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
-            // 
-            // textBoxDe
-            // 
-            this.textBoxDe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxDe.Location = new System.Drawing.Point(12, 12);
-            this.textBoxDe.Multiline = true;
-            this.textBoxDe.Name = "textBoxDe";
-            this.textBoxDe.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxDe.Size = new System.Drawing.Size(240, 320);
-            this.textBoxDe.TabIndex = 0;
-            // 
-            // textBoxEn
-            // 
-            this.textBoxEn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxEn.Location = new System.Drawing.Point(340, 12);
-            this.textBoxEn.Multiline = true;
-            this.textBoxEn.Name = "textBoxEn";
-            this.textBoxEn.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxEn.Size = new System.Drawing.Size(240, 320);
-            this.textBoxEn.TabIndex = 1;
             // 
             // btnEnCode
             // 
@@ -75,15 +55,35 @@
             this.btnDeCode.UseVisualStyleBackColor = true;
             this.btnDeCode.Click += new System.EventHandler(this.btnDeCode_Click);
             // 
+            // richTextBoxEn
+            // 
+            this.richTextBoxEn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richTextBoxEn.Font = new System.Drawing.Font("黑体", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxEn.Location = new System.Drawing.Point(340, 12);
+            this.richTextBoxEn.Name = "richTextBoxEn";
+            this.richTextBoxEn.Size = new System.Drawing.Size(240, 321);
+            this.richTextBoxEn.TabIndex = 4;
+            this.richTextBoxEn.Text = "";
+            // 
+            // richTextBoxDe
+            // 
+            this.richTextBoxDe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richTextBoxDe.Font = new System.Drawing.Font("黑体", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxDe.Location = new System.Drawing.Point(12, 12);
+            this.richTextBoxDe.Name = "richTextBoxDe";
+            this.richTextBoxDe.Size = new System.Drawing.Size(240, 321);
+            this.richTextBoxDe.TabIndex = 5;
+            this.richTextBoxDe.Text = "";
+            // 
             // SafeDrivingGuideForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(592, 345);
+            this.Controls.Add(this.richTextBoxDe);
+            this.Controls.Add(this.richTextBoxEn);
             this.Controls.Add(this.btnDeCode);
             this.Controls.Add(this.btnEnCode);
-            this.Controls.Add(this.textBoxEn);
-            this.Controls.Add(this.textBoxDe);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(608, 383);
@@ -91,17 +91,17 @@
             this.Name = "SafeDrivingGuideForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "安全驾驶指南";
+            this.Click += new System.EventHandler(this.SafeDrivingGuideForm_Click);
+            this.DoubleClick += new System.EventHandler(this.SafeDrivingGuideForm_DoubleClick);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBoxDe;
-        private System.Windows.Forms.TextBox textBoxEn;
         private System.Windows.Forms.Button btnEnCode;
         private System.Windows.Forms.Button btnDeCode;
+        private System.Windows.Forms.RichTextBox richTextBoxEn;
+        private System.Windows.Forms.RichTextBox richTextBoxDe;
     }
 }
 
