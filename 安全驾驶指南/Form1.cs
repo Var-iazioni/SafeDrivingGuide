@@ -156,7 +156,11 @@ namespace 安全驾驶指南
             string output = "";
             foreach (char c in input)
             {
+                Regex regex = new Regex(@"[，。；？~！：‘“”’【】（）]");
+
                 if (c >= 0x4e00 && c <= 0x9fbb)
+                    output = output + c;
+                else if (regex.IsMatch(c.ToString()))
                     output = output + c;
                 else
                     output = output + Convert.ToString(Convert.ToInt32(c.ToString().ElementAt(0)), 16);

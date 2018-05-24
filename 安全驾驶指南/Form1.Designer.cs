@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SafeDrivingGuideForm));
             this.textBoxDe = new System.Windows.Forms.TextBox();
             this.textBoxEn = new System.Windows.Forms.TextBox();
             this.btnEnCode = new System.Windows.Forms.Button();
@@ -40,15 +41,17 @@
             this.textBoxDe.Location = new System.Drawing.Point(12, 12);
             this.textBoxDe.Multiline = true;
             this.textBoxDe.Name = "textBoxDe";
+            this.textBoxDe.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxDe.Size = new System.Drawing.Size(240, 320);
             this.textBoxDe.TabIndex = 0;
             // 
             // textBoxEn
             // 
             this.textBoxEn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxEn.Location = new System.Drawing.Point(339, 12);
+            this.textBoxEn.Location = new System.Drawing.Point(340, 12);
             this.textBoxEn.Multiline = true;
             this.textBoxEn.Name = "textBoxEn";
+            this.textBoxEn.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxEn.Size = new System.Drawing.Size(240, 320);
             this.textBoxEn.TabIndex = 1;
             // 
@@ -81,6 +84,7 @@
             this.Controls.Add(this.btnEnCode);
             this.Controls.Add(this.textBoxEn);
             this.Controls.Add(this.textBoxDe);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(608, 383);
             this.MinimumSize = new System.Drawing.Size(608, 383);
